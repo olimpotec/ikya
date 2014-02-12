@@ -50,27 +50,33 @@
     <!-- START PAGE WRAP -->    
     <div class="page-wrap">
     
- <div id="home" class="home-parallax home4" >
+  <!-- START HOME SECTION -->    
+  <div id="home" class="home-parallax home-newsletter">
+    <a href="#home" id="logo-main"><img src="images/main-logo.png" title="logo" alt="Logo"/></a>
       <div class="home-text-wrapper">
-
-      <div class="sixteen columns">     
-             
-                <div class="home-logo-text">
-
-                  <img src="images/main-logo.png" title="logo" alt="Logo"/>
-                </div>
-      </div>          
+          <div class="home-logo-text light">
+            <a href="#about">Relacionamento...</a>
+          </div>
            <div class="container clearfix">
-              <div class="home-quote">
-                <h1>
-                    <span class="slabtext">Entenda o perfil do seu cliente,</span>
-                    <span class="slabtext second-child"> Analise, Otimize e Lucre</span>                                   
+              <div class="home-quote aligncenter">
+                <h1> 
+                <span class="slabtext highlight">Entenda o perfil do seu cliente</span>
                 </h1>
-              </div>
+                <h3>Inove, Otimize e Lucre. Temos a plataforma ideal para atingir seus objetivos.</h3>
+               </div>
+  
+              <form method="post" action="subscribe.php" id="newsletterform">
+                <div>
+                  <input type="text" class="input-field" id="newsletter-name" name="newsletter-name" placeholder="Seu Nome">
+                  <input type="text" class="input-field" id="newsletter-email" name="newsletter-email" placeholder="Seu E-mail">
+                  <a id="button-newsletter" class="button" href="#" title="Subscribe now">Quero receber novidades!</a>            
+                </div>
+              </form>
            </div><!-- END CONTAINER -->
-       </div><!-- END CS TEXT CONTAINER -->
-  </div>
+        </div><!-- END HOME TEXT WRAPPER -->
+     </div><!-- END HOME SECTION -->
   <!-- END HOME SECTION -->
+  
 	
 	
     <!-- START NAVIGATION -->
@@ -241,7 +247,7 @@
 				<div class="title">
 				  <h1>Contato</h1>
                   <div class="subtitle">
-                      <p>Quer ser o primeiro a testar esta plataforma? Informe os dados abaixo que avisaremos quando estiver pronto!</p>
+                      <p>Quer ser o primeiro a testar esta plataforma? Informe os dados abaixo que avisaremos quando estiver pronto ou tire suas dúvidas!</p>
                   </div><!-- END SUBTITLE -->
                 </div><!-- END TITLE -->  	                           
 			</div><!-- END SIXTEEN COLUMNS -->  

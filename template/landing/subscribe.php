@@ -61,8 +61,8 @@
         $headers .= "X-Mailer: PHP " . PHP_VERSION . "\n";
         $headers .= "From: {$myEmail} \n";
         $headers .= "Return-Path: {$myEmail} \n";
-        $message = 'The following person was kind enough to subscribe to your newsletter:' . PHP_EOL . $name . ' - ' . $emailAddress;
-        @mail($myEmail, 'You have a new newsletter subscriber', $message, $headers);
+        $message = 'O seguinte usuário assinou a newsletter:' . PHP_EOL . $name . ' - ' . $emailAddress;
+        @mail($myEmail, 'iKya: Novo Assinante!', $message, $headers);
     }
     response('ok', 'subscribed');
   } else {

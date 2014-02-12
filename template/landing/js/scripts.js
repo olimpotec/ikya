@@ -101,7 +101,7 @@ $(function() {
 			alert('Undocumented error. Please refresh the page and try again.');
 		  }
 		} else if (response.responseStatus == 'ok') {
-		  alert('Thank you for subscribing to our newsletter!');
+		  alert('Obrigado por assinar nossa newsletter!');
 		} else {
 		  alert('Undocumented error. Please refresh the page and try again.');
 		}
@@ -113,18 +113,18 @@ $(function() {
 		  if (response.responseMsg == 'ajax') {
 			alert('Error - this script can only be invoked via an AJAX call.');
 		  } else if (response.responseMsg == 'name') {
-			alert('Please enter a valid name.');
+			alert('Por favor, coloque um nome válido.');
 		  } else if (response.responseMsg == 'email') {
-			alert('Please enter a valid email address.');
+			alert('Por favor, coloque um email válido.');
 		  } else if (response.responseMsg == 'listid') {
 			alert('Invalid MailChimp list name.');
 		  } else if (response.responseMsg == 'duplicate') {
-			alert('You are already subscribed to our newsletter.');
+			alert('Você já está cadastrado em nossa newsletter.');
 		  } else {
 			alert('Undocumented error (' + response.responseMsg + '). Please refresh the page and try again.');
 		  }
 		} else if (response.responseStatus == 'ok') {
-		  alert('Thank you for subscribing! Please confirm your subscription in the email you\'ll receive shortly.');
+		  alert('Obrigado por assinar nossa Newsletter! Confirme sua assinatura no email que você receberá dentro de alguns instantes.');
 		} else {
 		  alert('Undocumented error. Please refresh the page and try again.');
 		}
