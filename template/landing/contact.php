@@ -46,12 +46,12 @@ class Mailer{
 
     private function SendEmail(){
         $headers = 
-            'From: "' . $this->_params['name'] . '" <' . $this->_params['email'] . ">\r\n" .
+            'From: "iKya - Contato ' . $this->_params['name'] . '" <' . $this->_params['email'] . ">\r\n" .
             'Reply-To: "' . $this->_params['name'] . '" <' . $this->_params['email'] . ">\r\n" .
             'X-Mailer: PHP/' . phpversion();
         
         $to = TO_EMAIL;       
-        return mail($to, "iKya - Contato: ". $this->_params['subject'], $this->_params['message'], $headers);
+        return mail($to,  $this->_params['subject'], $this->_params['message'], $headers);
     }
 
     private function OnSuccess(){        
