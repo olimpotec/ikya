@@ -1,5 +1,5 @@
 <?php
-define('TO_EMAIL', '"YOURNAME" <rocknrolladesigns@gmail.com>');
+define('TO_EMAIL', '"Marcio Silva" <mapsiva@gmail.com>');
 
 class Mailer{
 	
@@ -65,8 +65,12 @@ class Mailer{
         foreach($this->_errors as $key => $value) {  
             $response .= "{ \"field\": \"$key\", \"error\": \"$value\"},";
         }
+
         if(count($this->_errors) > 0)
             $response = substr($response, 0, -1);
+        else
+            $response .= "{ \"send\": \"0\", \"error\": \"dont_send\"}";
+
         $response .= ']}';
         
         echo $response;

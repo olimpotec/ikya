@@ -19,13 +19,14 @@ $('.video_slide').css("height",height_responsive);
  
 var   window_height = $(window).height(),
       testMobile,
-	  loadingError = '<p class="error">The Content cannot be loaded.</p>',
-	  nameError = '<div class="alert-message error">Please enter your name.<span class="close" href="#">x</span></div>',
-	  emailError = '<div class="alert-message error">Please enter your e-mail address.<span class="close" href="#">x</span></div>',
-	  invalidEmailError = '<div class="alert-message error">Please enter a valid e-mail address.<span class="close" href="#">x</span></div>',	  
-	  subjectError = '<div class="alert-message error">Please enter the subject.<span class="close" href="#">x</span></div>',
-	  messageError = '<div class="alert-message error">Please enter your message.<span class="close" href="#">x</span></div>',	
-	  mailSuccess = '<div class="alert-message success">Your message has been sent. Thank you!<span class="close" href="#">x</span></div>', 
+	  loadingError = '<p class="error">O conteúdo não pode ser carregado.</p>',
+	  nameError = '<div class="alert-message error">Por favor, preencha com seu nome.<span class="close" href="#">x</span></div>',
+	  emailError = '<div class="alert-message error">Por favor, preencha seu endereço de email.<span class="close" href="#">x</span></div>',
+	  invalidEmailError = '<div class="alert-message error">Por favor, preencha com um endereço de e-mail válido.<span class="close" href="#">x</span></div>',	  
+	  subjectError = '<div class="alert-message error">Preencha corretamente o assunto.<span class="close" href="#">x</span></div>',
+	  messageError = '<div class="alert-message error">Preencha corretamente o conteúdo da mensagem.<span class="close" href="#">x</span></div>',	
+	  mailSuccess = '<div class="alert-message success">Sua mensagem foi enviada. Obrigado!<span class="close" href="#">x</span></div>', 
+	  mailSendError = '<div class="alert-message error">Não foi possível enviar seu email. Tente novamente mais tarde!<span class="close" href="#">x</span></div>', 
 	  mailResult = $('#contact .result'),
       current,
 	  next, 
@@ -328,6 +329,7 @@ function home_parallax() {
                 }
                 else
                 {
+                	mailResult.html ('');
 				   for(i=0; i<response.errors.length; i++){
 					 if(response.errors[i].error == 'empty_name')  {                          
 					   mailResult.append(nameError);
@@ -343,6 +345,9 @@ function home_parallax() {
 					 }
 					 if(response.errors[i].error == 'invalid'){
 						mailResult.append(invalidEmailError);
+					 }
+					 if(response.errors[i].error == 'dont_send'){
+						mailResult.append(mailSendError);
 					 }
 				   }
                 }
