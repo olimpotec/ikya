@@ -1,5 +1,5 @@
 <?php
-define('TO_EMAIL', '"Marcio Silva" <mapsiva@gmail.com>');
+define('TO_EMAIL', '"Contato iKya" <contato@ikya.com.br>');
 
 class Mailer{
 	
