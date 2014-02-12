@@ -51,7 +51,7 @@ class Mailer{
             'X-Mailer: PHP/' . phpversion();
         
         $to = TO_EMAIL;       
-        return mail($to, $this->_params['subject'], $this->_params['message'], $headers);
+        return mail($to, "iKya - Contato: ". $this->_params['subject'], $this->_params['message'], $headers);
     }
 
     private function OnSuccess(){        
