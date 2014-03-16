@@ -1508,13 +1508,13 @@ p.quote {
 	margin-right: 0;
 }
  #comment-input input:-moz-placeholder, #comment-textarea textarea:-moz-placeholder {
- color: #999;
+ color: #000;
 }
  #comment-input input:-ms-input-placeholder, #comment-textarea textarea:-ms-input-placeholder {
- color: #999;
+ color: #000;
 }
  #comment-input input::-webkit-input-placeholder, #comment-textarea textarea::-webkit-input-placeholder {
- color: #999;
+ color: #000;
 }
 
 .home-newsletter input:-moz-placeholder, .home-newsletter input:-ms-input-placeholder, input::-webkit-input-placeholder
